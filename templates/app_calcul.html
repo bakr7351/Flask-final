@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <title>calcule</title>
+    </head>
+    <body style="background-color: #141417;color: #FFFF;">
+        <h1 style="position: absolute; top: 50px;left: 300px;">calcul de coefficient de diffusion avec la méthode d Hsu and Chen </h1>
+        <p style="left: 80px;top: 100px;">
+            La <strong style="color: #5942ff;">méthode de Hsu and Chen</strong> est une approche semi-empirique utilisée pour déterminer le coefficient de diffusion dans des milieux poreux ou fluides. <br> Elle repose sur des corrélations expérimentales qui prennent en compte les propriétés physiques du fluide ainsi que les caractéristiques géométriques du système étudié. <br> Cette méthode est particulièrement utile lorsqu'une modélisation analytique directe du phénomène de diffusion est complexe ou imprécise.
+          </p>
+        <p style="position: absolute; top: 200px;left: 100px;">exemple de le methanol (A) et l'eau (B):</p>
+        <fieldset style="max-width: 900px;left: 150px;top: 300px;width: 700px;">
+        <form method="POST">
+            <label for="Xa"style="position: relative;">Xa (entre 0 et 1) :</label>
+            <input type="number" name="Xa" value="0.25" required style="position: relative;"><br><br>
+
+            <label for="T"style="position: relative;">Température (K) :</label>
+            <input type="number" name="T" required value="313.13" style="position: relative;"><br><br>
+
+            <label for="aBA"style="position: relative;">aBA :</label>
+            <input type="number" name="aBA" required value="194.5302" style="position: relative;"><br><br>
+
+            <label for="aAB"style="position: relative;"> aAB :</label>
+            <input type="number" name="aAB" required value="-10.7575" style="position: relative;"><br><br>
+
+            <label for="rA"style="position: relative;">rA :</label>
+            <input type="number" name="rA" required value="1.4311" style="position: relative;"><br><br>
+
+            <label for="rB"style="position: relative;">rB :</label>
+            <input type="number" name="rB" required value="0.92" style="position: relative;"><br><br>
+
+            <label for="qA"style="position: relative;">qA :</label>
+            <input type="number" name="qA" required value="1.432" style="position: relative;"><br><br>
+
+            <label for="qB"style="position: relative;"> qB :</label>
+            <input type="number" name="qB" required value="1.4" style="position: relative;"><br><br>
+
+            <label for="lambda_A"style="position: relative;">lambda_A :</label>
+            <input type="number" name="lambda_A" value="1.127" required style="position: relative;"><br><br>
+
+            <label for="lambda_B"style="position: relative;">lambda_B :</label>
+            <input type="number" name="lambda_B" value="0.973" required style="position: relative;"><br><br>
+
+            <label for="D_AB"style="position: relative;">D_AB :</label>
+            <input type="number" name="D_AB" value="2.1e-5" required style="position: relative;"><br><br>
+
+            <label for="D_BA"style="position: relative;"> D_BA :</label>
+            <input type="number" name="D_BA" value="2.67e-5" required style="position: relative;"><br><br>
+
+            <label for="V_exp"style="position: relative;">V_exp :</label>
+            <input type="number" name="V_exp" value="1.33e-05" required style="position: relative;"><br><br>
+            
+
+            <button type="submit"style="position: relative;">Calculer</button>
+
+            <details style="position:absolute;top: 10px;left:800px;">
+                <summary>Afficher les détails</summary>
+                {{ detail | safe }}
+            </details>
+
+            {{ result | safe }}
+
+        </form>
+        <a href="{{ url_for('interface') }}">back</a>
+        </fieldset>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"> 
+    </body>
+</html>

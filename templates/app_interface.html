@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+    </head>
+    <body style="background-image: url('/static/background1.jpg');background-repeat: no-repeat;background-position: center;background-size: cover;height: 87vh;width: 84vh;">
+        <h1 style="color:#ffffff;position: absolute;top: 10px;left: 450px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;font-size: 50px;">transfer de masse et de chaleur</h1>
+        <h1 style="color:#5942ff;position: absolute;top: 100px;left: 400px;font-family: Arial, Helvetica, sans-serif;">Bonjour</h1>
+        <p style="left: 350px;top: 150px;">
+            Le transfert de masse et de chaleur constitue un domaine fondamental en génie des procédés, en physique appliquée et en thermodynamique. Il regroupe l’étude des mécanismes par lesquels l’énergie thermique et les espèces chimiques se déplacent sous l'effet de gradients de température et de concentration.</p>
+            <br><br>
+            <p style="left: 650px;top: 90px;">Ces phénomènes sont souvent couplés et obéissent à des lois similaires, telles que la loi de Fourier pour la conduction thermique et la loi de Fick pour la diffusion de masse. Leur compréhension permet de modéliser des processus complexes, allant de l’échange thermique dans les solides à la diffusion dans les fluides.</p>
+            <br><br>
+            <p style="left: 330px;top: 50px;"> Ce site présente deux approches essentielles : la <strong style="color: #5942ff;">méthode de Hsu and Chen</strong>, reconnue pour son efficacité dans le calcul du coefficient de diffusion en milieu complexe
+            </p>
+        <a href="{{ url_for('calcul') }}" style="position: absolute;top: 560px;left: 120px;font-size: 20px;">calcul de coefficient de diffusion avec la méthode d Hsu and Chen</a>
+        <a href="{{ url_for('logout') }}" class="logout-btn" style="position: relative;bottom: 450px;left: 1200px;">Se déconnecter</a>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </body>
+</html>

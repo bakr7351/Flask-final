@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+</head>
+<body style="background-image: url('/static/background4.png');background-position: center;background-size: cover;background-repeat: no-repeat;height: 87vh;width: 84vh;">
+    <fieldset style="position: absolute;top: 200px;left: 530px;color: rgba(79,0,183,255);border-radius: 20px;border-color: rgba(79,0,183,255);font-size: 25px;font-family: Arial, Helvetica, sans-serif;border-width: 2px;box-shadow: 0 0 100px #9b30ff50;max-width: 360px;">
+        <h2 style="position: relative;left: 100px;">Inscription</h2>
+        <form method="post">
+            <label for="email">Email :</label>
+            <input type="email" name="email" required >
+            <br>
+            <label for="password">Mot de passe :</label>
+            <input type="password" name="password" required >
+            <br>
+            <button type="submit" style="background-color: rgba(79,0,183,255) ;position: relative;padding-left: 120px;padding-right: 120px;border-radius: 10px;border-color: rgba(79,0,183,255);border-width: 1px;padding-top: 5px;padding-bottom: 5px;font-size: 20px;top: 10px;">S'inscrire</button>
+        </form>
+    {{ message | safe }}
+    <a href="{{ url_for('login') }}" style="color:rgba(79,0,183,255);top: 10px;">back</a>
+    </fieldset>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">  
+</body>
+</html>

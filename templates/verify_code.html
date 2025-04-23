@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Vérification du code</title>
+</head>
+<body style="background-image: url('/static/background4.png');background-position: center;background-size: cover;background-repeat: no-repeat;height: 87vh;width: 84vh;">
+    <fieldset style="max-width: 500px;left: 480px;top: 180px;">
+    <h1>Vérification du code</h1>
+    <form action="{{ url_for('verify_code') }}" method="POST">
+        <label for="email">Adresse email :</label>
+        <input type="email" name="email" id="email" required><br>
+
+        <label for="reset_code">Code de réinitialisation :</label>
+        <input type="text" name="reset_code" id="reset_code" required><br>
+
+        <label for="new_password">Nouveau mot de passe :</label>
+        <input type="password" name="new_password" id="new_password" required><br>
+
+        <button type="submit">Réinitialiser le mot de passe</button>
+        <a href="{{ url_for('login') }}" style="color:rgba(79,0,183,255);top: 10px;">back</a>
+    </fieldset>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"> 
+    </form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Ignore les fichiers temporaires Python
+__pycache__/
+*.pyc
+
+# Ignore les environnements virtuels
+venv/
+
+# Ignore les fichiers de configuration privée
+.env
+
+# Ignore les fichiers de base de données
+*.sqlite3
+
