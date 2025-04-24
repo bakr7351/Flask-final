@@ -47,9 +47,6 @@ def calcul_diffusion(Xa, T, aBA, aAB, rA, rB, qA, qB, lambda_A, lambda_B, D_AB, 
 
 @app.route("/calcul", methods=["GET", "POST"])
 def calcul():
-    # 🔒 Vérification de connexion
-    if 'user' not in session:
-        return redirect(url_for('login'))  # Redirige vers la page de login
     result = ""
     detail = ""
     if request.method == "POST":
